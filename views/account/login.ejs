@@ -1,0 +1,22 @@
+
+<form id="loginForm" action="/account/login" method="post">
+    <fieldset>
+
+      <label for="accountPassword">Password:</label> 
+  
+      <input type="password" name="account_password" id="accountPassword" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$">
+    
+
+  <label for="email" class="req">Email Address</label>
+  <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" required placeholder="Please use your school email address">
+  
+  <label for="accountPassword">Password:</label> 
+ <input type="password" name="account_password" id="accountPassword" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$">
+
+
+
+  <button id="btnSubmit" type="submit">login</button>
+</fieldset>
+</form>
+<p> no account?  <a href ="/account/register"> sign up</a></p>
+<script src ="/js/script.js"> </script>
