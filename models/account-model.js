@@ -1,4 +1,4 @@
-const pool = require("../database/index")
+const pool = require("../database/")
 
 
 /* *****************************
@@ -12,3 +12,5 @@ async function registerAccount(account_firstname, account_lastname, account_emai
       return error.message
     }
   }
+
+  module.exports ={registerAccount}

@@ -1,6 +1,6 @@
 <h1>Register</h1>
 <p> all field is required </p>
-<form action="/account/register" method="post">
+<form id ="registerForm" action="/account/register" method="post">
     <fieldset>
 
              <label for="firstname" >First Name</label>
@@ -16,7 +16,7 @@
             
 
             <label for="email" >Email Address</label>
-            <input type="email" id="account_email" name="account_email" pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" required placeholder="Please use your school email address"><br>
+            <input type="email" id="account_email" name="account_email"  required placeholder="Please use your school email address"><br>
 
       <button type ="submit">Register </button>
         </fieldset>
