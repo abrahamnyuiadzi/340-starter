@@ -1,5 +1,12 @@
 <h1>Register</h1>
 <p> all field is required </p>
+<% if (errors) { %>
+  <ul class="notice">
+ <% errors.array().forEach(error => { %>
+   <li><%= error.msg %></li>
+<%  }) %>
+ </ul>
+<% } %>
 <form id ="registerForm" action="/account/register" method="post">
     <fieldset>
 
@@ -8,11 +15,12 @@
             <label for="firstname" >Last Name</label>
             <input type="text"  name="account_lastname"  id ="account_lastname " size ="10" required><br>
             
+
+            <span>Passwords must be at least 12 characters and contain at
+              least 1 number, 1 capital letter and 1 special character <br></span>
             <label for="accountPassword">Password:</label> 
-            
-           <input type="password" name="account_password" id="account_Password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$"><br>
-           <span>Passwords must be at least 12 characters and contain at
-            least 1 number, 1 capital letter and 1 special character</span> <br>
+            <input type="password" name="account_password" id="account_Password" required ><br>
+        
             
 
             <label for="email" >Email Address</label>
